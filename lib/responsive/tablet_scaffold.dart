@@ -19,20 +19,20 @@ class _TabletScaffodState extends State<TabletScaffod> {
     return Scaffold(
       backgroundColor: myDefaultBackground,
       appBar: myAppBar,
-      drawer: myDrawer,
+      drawer: myDrawer(),
       body: Column(
         children: [
           AspectRatio(
             aspectRatio: 4,
             child: SizedBox(
               width: double.infinity,
-              child:
-              GridView.builder(
-              physics: const BouncingScrollPhysics(
-                  parent: AlwaysScrollableScrollPhysics()),
-              scrollDirection: Axis.horizontal,
+              child: GridView.builder(
+                physics: const BouncingScrollPhysics(
+                    parent: AlwaysScrollableScrollPhysics()),
+                scrollDirection: Axis.horizontal,
                 itemCount: 8,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1),
                 itemBuilder: (context, index) {
                   return MyBox();
                 },
@@ -41,7 +41,7 @@ class _TabletScaffodState extends State<TabletScaffod> {
           ),
           Expanded(
             child: ListView.builder(
-             physics: const BouncingScrollPhysics(
+              physics: const BouncingScrollPhysics(
                   parent: AlwaysScrollableScrollPhysics()),
               itemCount: 5,
               itemBuilder: ((context, index) {

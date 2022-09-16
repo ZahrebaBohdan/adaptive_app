@@ -18,7 +18,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
     return Scaffold(
       appBar: myAppBar,
       backgroundColor: myDefaultBackground,
-      drawer: myDrawer,
+      drawer: myDrawer(),
       body: Column(
         children: [
           AspectRatio(

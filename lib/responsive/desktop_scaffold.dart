@@ -22,7 +22,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
       // appBar: myAppBar,
       body: Row(
         children: [
-          myDrawer,
+          myDrawer(),
           Expanded(
             child: Column(
               children: [
